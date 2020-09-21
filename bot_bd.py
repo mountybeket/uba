@@ -5,13 +5,10 @@ from telebot import types
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
-bot = telebot.TeleBot(config.token) #должно быть в начале. Вызывает токен
+bot = telebot.TeleBot(config.token)
 
-cred = credentials.Certificate("C:/Users/erhsh/Desktop/work/uba/key.json")
+cred = credentials.Certificate("/home/kokoto/uba/key.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://ubabot-61ae0.firebaseio.com/' })
 
