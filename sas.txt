@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=sas
+Group=sas
+
+WorkingDirectory=/home/sas/uba/
+Environment="PYTHONPATH=/home/sas/uba/"
+ExecStart=/home/sas/uba/.venv/bin/python /home/sas/uba/bot_bd.py
+
+[Install]
+WantedBy=multi-user.target
