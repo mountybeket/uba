@@ -392,7 +392,7 @@ def start_dialog(message):
                 markup = types.InlineKeyboardMarkup()
                 btn_docs= types.InlineKeyboardButton(text='8.11.2012   №500', url='http://adilet.zan.kz/rus/docs/V1200008170')
                 btn_docs2= types.InlineKeyboardButton(text='(4.09.2018   №441)', url='http://adilet.zan.kz/rus/docs/V1200008170')
-                btn_docs2= types.InlineKeyboardButton(text='(17.08.2020 г №350)', url='http://adilet.zan.kz/rus/docs/V2000021105#z7')
+                btn_docs3= types.InlineKeyboardButton(text='(17.08.2020 г №350)', url='http://adilet.zan.kz/rus/docs/V2000021105#z7')
                 markup.add(btn_docs)
                 markup.add(btn_docs2)
                 markup.add(btn_docs3)
