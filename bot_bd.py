@@ -6,7 +6,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(config.token, threaded = False)
+
+
 
 cred = credentials.Certificate("/home/kokoto/uba/key.json")
 firebase_admin.initialize_app(cred, {
@@ -2537,4 +2539,13 @@ def start_dialog(message):
 
 
 
-bot.polling(none_stop=True) #в конце. Бесконечно.
+bot.infinity_polling(True)
+
+while 1:
+    try:
+        bot.polling(none_stop=True)
+        print(cycle)
+        time.sleep(3)
+    except Exception as e:
+        print(e)
+        pass
